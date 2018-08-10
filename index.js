@@ -40,7 +40,7 @@ module.exports = function(opts) {
 
                         // File will not be included because of its size
                         if (opts.maxSize && size > opts.maxSize && !matches[i].force) {
-                            if (opts.debug) gutil.log('gulp-image-to-base64:', gutil.colors.yellow('file is greater than ' + Math.round(size / 1024) + 'kb > ' + Math.round(opts.maxSize / 1024) + 'kb => skip') + gutil.colors.gray(' (' + filepath + ')'));
+                            if (opts.debug) gutil.log('gulp-imageToBase64:', gutil.colors.yellow('file is greater than ' + Math.round(size / 1024) + 'kb > ' + Math.round(opts.maxSize / 1024) + 'kb => skip') + gutil.colors.gray(' (' + filepath + ')'));
                             str = str.replace(matches[i].txt, 'url(' + matches[i].url + ')');
                         }
 
@@ -53,7 +53,7 @@ module.exports = function(opts) {
                         }
 
                     } else {
-                        if (opts.debug) gutil.log('gulp-image-to-base64:', gutil.colors.red('file not found => skip') + gutil.colors.gray(' (' + filepath + ')'));
+                        if (opts.debug) gutil.log('gulp-imageToBase64:', gutil.colors.red('file not found => skip') + gutil.colors.gray(' (' + filepath + ')'));
                     }
                 }
             }
