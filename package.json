@@ -1,0 +1,27 @@
+{
+  "name": "gulp-image-to-base64",
+  "version": "1.0.0",
+  "description": "Convert assets to inline base64, ideal to integrate small pictures in your css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anisabid/gulp-image-to-base64.git"
+  },
+  "keywords": [
+    "gulp",
+    "base64"
+  ],
+  "author": {
+    "name": "Anis ABID",
+    "email": "anab.tn@gmail.com"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/anisabid/gulp-image-to-base64#readme",
+  "dependencies": {
+    "event-stream": "x.x.x",
+    "gulp-util": "x.x.x",
+    "mime": "x.x.x"
+  }
+}
