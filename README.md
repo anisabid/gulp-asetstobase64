@@ -1,4 +1,4 @@
-GULP imageToBase64
+GULP assetsToBase64
 ==================
 
 This helper will inject images and fonts into your css files.
@@ -9,7 +9,7 @@ Install it
 ----------
 
 ```
-npm install --save-dev gulp-image-to-base64
+npm install --save-dev gulp-assetstobase64
 ```
 
 Use it
@@ -18,7 +18,7 @@ Use it
 Here is my sass config. As you can see, I use the 'maxSize' option to specitfy that files larger than 14kb are not injected into the css file.
 
 ```
-var imageToBase64 = require('gulp-imageToBase64');
+var assetsToBase64 = require('gulp-assetstobase64');
 
 $ = require('gulp-load-plugins')({lazy: true});
 ...
@@ -28,7 +28,7 @@ gulp.task('sass', function() {
     return gulp
         .src(config.sass.src)
         .pipe($.sass().on('error', $.sass.logError))
-        .pipe(imageToBase64({
+        .pipe(assetsToBase64({
            baseDir: config.src,
            maxSize: 14 * 1024,
            debug: true
@@ -49,10 +49,10 @@ Options
 Force asset injection
 ---------------------
 
-In your css file, just add ``,imageToBase64`` to the image url : it will force the asset to be injected in base64 in css file, event if the ``maxSize`` is reached.
+In your css file, just add ``,base64`` to the image url : it will force the asset to be injected in base64 in css file, event if the ``maxSize`` is reached.
 
 ```
 div.logo {
-	background: transparent url(/img/logo.png,imageToBase64) no-repeat center center;
+	background: transparent url(/img/logo.png,base64) no-repeat center center;
 }
 ```
